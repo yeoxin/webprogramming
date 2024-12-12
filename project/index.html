@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lofi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- 시간을 표시할 div -->
+    <div id="time-setting-container">
+        <div id="time">
+            <span id="time-display"></span>
+        </div>
+        <button id="settings-btn">
+            <img src="images/setting.png" alt="setting">
+        </button>
+    </div>
+
+    <!-- 남은 시간 표시 -->
+    <div id="timer-container">
+        <span id="timer-display">타이머 설정</span>
+    </div>
+
+    <!-- 오디오 컨트롤 -->
+    <div id="audio-controls">
+        <div class="slider-container">
+            <img src="images/rain.png" alt="Rain">
+            <input type="range" min="0" max="1" step="0.01" class="slider" data-sound="rain.mp3">
+        </div>
+        <div class="slider-container">
+            <img src="images/wind.png" alt="Wind">
+            <input type="range" min="0" max="1" step="0.01" class="slider" data-sound="wind.mp3">
+        </div>
+        <div class="slider-container">
+            <img src="images/birds.png" alt="Birds">
+            <input type="range" min="0" max="1" step="0.01" class="slider" data-sound="birds.mp3">
+        </div>
+    </div>
+
+    <!-- 타이머 설정 팝업 -->
+    <div id="timer-popup" class="popup">
+        <h2>타이머 설정</h2>
+        <input type="text" id="task-name" placeholder="작업명">
+        <input type="number" id="minutes" min="1" placeholder="시간">
+        <button id="start-timer">시작</button>
+    </div>
+
+    <!-- To-Do List -->
+    <div id="todo-container">
+        <h3>할 일 목록</h3>
+        <div id="gpt">
+            <input type="text" id="todo-input" placeholder="할 일을 입력하세요">
+            <button id="add-todo-btn">+</button>
+        </div>
+        <ul id="todo-list"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
